@@ -1,42 +1,13 @@
-document.querySelector('.tecla_pom').onclick = tocaSompom;
-document.querySelector('.tecla_clap').onclick = tocaSomclap;
-document.querySelector('.tecla_tim').onclick = tocaSomtim;
-document.querySelector('.tecla_puff').onclick = tocaSompuff;
-document.querySelector('.tecla_splash').onclick = tocaSomsplash;
-document.querySelector('.tecla_toim').onclick = tocaSomtoim;
-document.querySelector('.tecla_psh').onclick = tocaSompsh;
-document.querySelector('.tecla_tic').onclick = tocaSomtic;
-document.querySelector('.tecla_tom').onclick = tocaSomtom;
-
-
-
-function tocaSompom(){
+function tocaSomPom(){
     document.querySelector('#som_tecla_pom').play();
 }
-function tocaSomclap(){
-    document.querySelector('#som_tecla_clap').play();
-}
+const listaDeTeclas = document.querySelectorAll('.tecla');
 
-function tocaSomtim(){
-    document.querySelector('#som_tecla_tim').play();
-}
+let contador = 0;
 
-function tocaSompuff(){
-    document.querySelector('#som_tecla_puff').play();
-}
+while(contador <listaDeTeclas.length){
+    listaDeTeclas[0].onclick = tocaSomPom;
+    contador = contador + 1;
 
-function tocaSomsplash(){
-    document.querySelector('#som_tecla_splash').play();
-}
-function tocaSomtoim(){
-    document.querySelector('#som_tecla_toim').play();
-}
-function tocaSompsh(){
-    document.querySelector('#som_tecla_psh').play();
-}
-function tocaSomtic(){
-    document.querySelector('#som_tecla_tic').play();
-}
-function tocaSomtom(){
-    document.querySelector('#som_tecla_tom').play();
+    console.log(contador);
 }
